@@ -34,7 +34,12 @@ const lookup = {
 function rot13(encodedStr) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
+	 for (const char of encodedStr) {
+    const decodedChar = lookup[char] || char;
+    decodedArr.push(decodedChar);
+  }
 
+  return decodedArr.join('');
   return; //return decodedArr
 }
 
